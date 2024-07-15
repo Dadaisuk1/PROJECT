@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a;
+    background: url('../images/1.jpg') no-repeat top / cover;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the 0.5 value to control the dimming level */
+    z-index: -1; /* Ensure it stays behind other content */
+}
+
+.body-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    padding: 4rem 8rem;
+    position: relative; /* Ensure content is above the overlay */
+    z-index: 1; /* Ensure content is above the overlay */
+}
+
+.text {
+    max-width: 600px;
+}
+
+.body-content h4{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #FF5E19;
+    margin-bottom: 1rem;
+}
+
+.body-content h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 120px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.body-content h1:hover{
+    color: #FF5E19;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.body-content p{
+    max-width: 500px;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.body-content p:hover{
+    color: #FF5E19;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.body-content .btn{
+    padding: 1rem 2rem;
+    background-color: #FF5E19;
+    color: #ffffff;
+    border: solid 2px #FF5E19;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+
+.body-content .btn:hover{
+    border: 2px solid;
+    background-color: #0a0a0a00;
+    color: #FF5E19;
+}
+
+.body-content .body-img{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.body-content img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.179);
+    background: url('../images/gym_muscles.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: absolute;
+    backdrop-filter: brightness(50%);
+    margin: 0;
+}
+
+.container {
+    margin: auto;
+    margin-top: 20px;
+    width: 500px;
+    background-color: #e6e6e63a;
+    color: rgb(0, 0, 0);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1, .header h2 {
+    text-align: center;
+    color: white;
+}
+
+.form_container label {
+    display: block;
+    margin-top: 10px;
+    color: white;
+}
+
+.form_container input, .form_container select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    color: #030303;
+}
+
+.form_container option {
+    color: #000000;
+}
+
+.form_container input[type="text"], input[type="password"], input[type="email"] {
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 10px;
+    color: #030303;
+}
+
+.form_container input[type="submit"] {
+    margin-top: 20px;
+    background-color: #FF5E19;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form_container input[type="submit"]:hover {
+    background-color: #fafafa;
+    color: #FF5E19;
+}
