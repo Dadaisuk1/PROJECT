@@ -1,27 +1,52 @@
 <?php    
+    session_start();
     include 'connect.php';
     include 'readrecord.php';   
     require_once 'includes/header.php'; 
 ?>
 
-<div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/dashboard.css">
-</div>
+</head>
+<body>
+    <div style='background-color:#7c7c7c3b'>
+        <center>
+            <p style="color:white" style="font-size:1rem"><h2>List of Clients</h2></p>
+        </center>
+    </div>    
+
+    <div class="buttons">
+        <div class="record">
+            <form method="POST"  onsubmit="return confirmLogout();">
+                <div class="record">
+                    <button type="submit" name="btnRecord">Add New Record</button>
+                </div>
+                <div class="logout">
+                    <button type="submit" name="btnLogout" >Logout</button>
+                </div> 
+            </form>
+        </div>
+
+        <script>
+            function confirmLogout() {
+                return confirm('Are you sure you want to log out?');
+            }
+        </script>
+        
+    </div>
     
-<div>
-	<button><a href="addrecord.php">Add New Client</a></button>
-</div> 
+</body>
+</html>
 
 <div>
-	<button><a href="logout.php">Logout</a></button>
+	
 </div> 
 
-
-<div style='background-color:#7c7c7c3b'>
-    <center>
-        <p style="color:white"><h2>List of Clients</h2></p>
-    </center>
-</div>     
+ 
 
 <br>
     <div>        
@@ -65,5 +90,18 @@
         </table>
         
     </div>
+
+<?php
+
+    if (isset($_POST['btnRecord'])){
+        header("Location: register.php");
+        exit();
+    } else if (isset($_POST['btnLogout'])) {
+        session_destroy();
+        header("Location: login.php");
+        exit();
+    }
+
+?>
 
 <?php require_once 'includes/footer.php'; ?>
