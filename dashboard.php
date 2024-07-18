@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
+
+    
     <div style='background-color:#7c7c7c3b'>
         <center>
             <p style="color:white" style="font-size:1rem"><h2>List of Clients</h2></p>
